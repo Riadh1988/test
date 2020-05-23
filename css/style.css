@@ -82,7 +82,7 @@ body {
     cursor: pointer;
 }
 
-.center__inner__tabs input:checked + label {
+#tab1:checked + label,#tab2:checked + label {
     border-bottom: solid 2px #1059FF;
     color: #fff !important;
     transition: all .25s ease;
@@ -94,10 +94,8 @@ body {
 }
 
 .center__inner__tabs .center__inner__tabs__content > div {
-/*height: 192px;*/
-
     display: none;
-    padding-top: 80px;
+    padding-top: 50px;
     overflow: hidden;
     text-align: left;
 }
@@ -111,9 +109,9 @@ body {
     position: relative;
 }
 
-.txt_field label {
+.txt_field label,.currency {
     display: block;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 400;
@@ -293,7 +291,7 @@ body {
 
 .welcome-left {
     opacity: 1 !important;
-    transform: translateY(-200px);
+    transform: translateY(-275px);
 }
 
 h1 {
@@ -326,7 +324,7 @@ h1 {
 }
 
 .btn-goback-up {
-    top: -100px !important;
+    top: -150px !important;
     opacity: 1 !important;
 }
 
@@ -347,4 +345,75 @@ a#btn-goback:hover {
 .notifications label {
     vertical-align: top;
     color: #fff;
+}
+
+.toggle_radio{
+  position: relative;
+  background: rgba(255,255,255,.1);
+  margin: 4px auto;
+  overflow: hidden;
+  padding: 0 !important;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 5px;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.toggle_radio > * {
+  float: left;
+}
+.toggle_radio input[type=radio]{
+  display: none;
+/*   position: fixed; */
+}
+.toggle_radio label{ 
+  color:#fff;
+  z-index: 0;
+  display: block;
+  width: 31.5%;
+  height: 50px;
+  margin: 3px 3px;
+  font-family: "Lato";
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1; 
+  text-align: center; 
+}
+.toggle_option_slider{ 
+  width: 31%;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.toggle_radio #first_toggle:checked ~ .toggle_option_slider{
+  background: rgba(255,255,255,.3);
+  left: 0px; 
+}
+.toggle_radio #second_toggle:checked ~ .toggle_option_slider{
+  background: rgba(255,255,255,.3);
+  left: 35%; 
+}
+.toggle_radio #third_toggle:checked ~ .toggle_option_slider{
+  background: rgba(255,255,255,.3);
+  left: 69%; 
+}
+
+span.description{
+  top:0px;
+}
+
+p.currency {
+	margin-top:0;
 }

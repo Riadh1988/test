@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="frame" id="frame">
+			<div class="nav">
+                <ul class="links">
+					<li class="email-active"><a class="btn">Email</a></li>
+					<li class="tel-num-inactive"><a class="btn">Mobile Number </a></li>
+
+				</ul>
+			</div>
+		<div>
+			<form id="formemail" class="formemail" action="" method="post" name="formemail">
+                <div class="txt_field">
+	                <label for="email">Email</label>
+					<input class="form-styling" name="email" type="email" id="email" placeholder="Email"/>
+					<div class="invalid-tooltip" id="invalid-email">Please enter a valid email</div> 
+				</div>
+				<input type="checkbox" id="conditions"/>
+				<label for="conditions" ><span class="ui"></span>I Agree Terms & Conditions</label>
+				
+				<input type="checkbox" id="notifications"/>
+				<label for="notifications" ><span class="ui"></span>Promo Notifications</label>
+				
+				<div class="btn-animate">
+					<a class="btn-email" onclick="Email(document.formemail.email)">Sign in</a> 
+				</div>
+			</form>
+        
+			<form id="formtelnum" class="formtelnum" action="" method="post" name="formtelnum">
+				
+				<div class="txt_field">
+					<label for="tel">Mobile Number</label>
+					<input class="form-styling" name="tel" type="tel" id="tel" placeholder="Mobile Number"/>
+					<div class="invalid-tooltip" id="invalid-tel">Please enter a valid mobile number</div>
+				</div>
+				
+				<input type="checkbox" id="conditions"/>
+				<label for="conditions" ><span class="ui"></span>I Agree Terms & Conditions</label>
+				
+				<input type="checkbox" id="notifications"/>
+				<label for="notifications" ><span class="ui"></span>Promo Notifications</label> 
+			    
+			    <div class="btn-animate">
+					<a class="tel-btn" onclick="phonenumber(document.formtelnum.tel)">Sign in</a>
+			    </div>
+			</form>
+        </div>
+        <div id="welcome"> 
+			<h1 class="welcome">Your account is created<br>You can proceed to</h1>
+			<a class="btn-goback" value="Refresh" onClick="history.go()">login</a>
+        </div>
+    </div> 
+    <div id="loadingGif" style="display:none" class="loading">
+			<span>Loading</span>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/8b27628590.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
